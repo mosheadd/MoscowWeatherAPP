@@ -1,0 +1,6 @@
+data/for_predictions/
+model/
+.vscode/
+weather_predictor_executed.ipynb
+__pycache__/
+.venv/

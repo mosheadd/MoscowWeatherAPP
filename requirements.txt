@@ -1,0 +1,3 @@
+streamlit==1.66.1
+matplotlib==3.10.8
+lightautoml==0.4.2
