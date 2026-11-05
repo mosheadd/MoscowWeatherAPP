@@ -31,9 +31,7 @@ def train_model():
     )
 
     if not MODEL.exists() or not DATA.exists():
-        raise FileNotFoundError(
-            "После обучения модель или topredict.csv не найдены."
-        )
+        raise FileNotFoundError("После обучения модель или topredict.csv не найдены.")
 
     print("Обучение завершено!")
 
@@ -41,24 +39,13 @@ def train_model():
 def run_app():
     print("Запускаем Streamlit...")
 
-    subprocess.run(
-        [
-            sys.executable, "-m", "streamlit",
-            "run", str(APP)
-        ],
-        cwd=BASE_DIR,
-        check=True
-    )
+    subprocess.run([sys.executable, "-m", "streamlit", "run", str(APP)], cwd=BASE_DIR, check=True)
 
 
 def main():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument(
-        "--train",
-        action="store_true",
-        help="Принудительно переобучить модель"
-    )
+    parser.add_argument("--train", action="store_true", help="Принудительно переобучить модель")
 
     args = parser.parse_args()
 

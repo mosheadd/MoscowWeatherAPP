@@ -1,5 +1,4 @@
 import streamlit as st
-import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import joblib
@@ -142,7 +141,7 @@ st.success("Модель успешно загружена!")
 
 if st.button("Сделать прогноз (predict)", type="primary"):
 
-    file_path = 'data/topredict.csv'
+    file_path = 'data/for_predictions/topredict.csv'
     try:
         df = pd.read_csv(file_path)
     except FileNotFoundError:
